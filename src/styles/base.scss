@@ -1,0 +1,101 @@
+$white: #ffedf9;
+$yellow: #ffd368;
+$red: #7c4063;
+$green: #315759;
+$body-bg: #28273d;
+
+$primary: $yellow;
+$secondary: $green;
+$danger: $red;
+
+$body-color: $white;
+
+$link-color: $primary;
+$link-hover-color: $danger;
+
+$card-border-color: $primary;
+
+$thumbnail-border-color: $primary;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '~bootstrap/scss/bootstrap';
+
+// 4. Add additional custom code here
+@import './pins';
+@import './modals';
+@import './wallets';
+@import './animations';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Audiowide, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: $primary;
+}
+
+h6 {
+  font-family: Audiowide, sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+i {
+  color: $primary;
+
+  &:hover {
+    color: $red;
+    transform: scale(1.15);
+  }
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+button:hover > i {
+  color: #ffd368;
+}
+
+// TODO: replace with b-badge component
+.info-box {
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  color: $primary;
+  background-color: $body-bg;
+  text-align: center;
+}
+
+.cta-header {
+  color: $body-bg;
+  margin: 0;
+}
+
+.cta-image {
+  max-width: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+}
+
+.card {
+  background-color: $body-bg;
+}

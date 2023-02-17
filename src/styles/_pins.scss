@@ -1,0 +1,63 @@
+#pin-2,
+#pin-5 {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px 5px rgba(255, 211, 104, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px 20px rgba(255, 211, 104, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px 5px rgba(255, 211, 104, 0.6);
+  }
+}
+
+.pin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.pin {
+  background-color: #28273d;
+  color: #ffd368;
+  border: 2px solid #ffd368;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+
+.pin:hover {
+  transform: scale(1.15);
+  background-color: #ffd368;
+}
+
+.pin:hover + * {
+  background-color: #ffd368;
+}
+
+.pin-icon {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+}
+
+.pin-stem {
+  width: 1px;
+  height: 50px;
+  background-color: #ffd368;
+}
+
+.pin-base {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}

@@ -1,0 +1,23 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  overflow: hidden;
+  transition: opacity, transform 1s ease;
+}
+
+.slide-enter-from,
+.slide-leave-active {
+  opacity: 0;
+  transform: translate(-100%, 0);
+  overflow: hidden;
+}
+

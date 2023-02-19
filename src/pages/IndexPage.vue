@@ -31,7 +31,11 @@ const onShowMintLiveClose = () => {
 <template>
   <b-container>
     <MintModal v-if="showMintModal" @close="showMintModal = false" />
-    <MintLive v-if="showMintLive" @close="showMintLive = false" />
+    <MintLive
+      v-if="showMintLive"
+      @close="showMintLive = false"
+      @action="onShowMintLiveClose"
+    />
     <header class="my-5 d-flex justify-content-center">
       <img
         class="header-img"
